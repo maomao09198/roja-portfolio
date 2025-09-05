@@ -136,6 +136,38 @@ footer span{color:#0ff;}
 /* Fix navbar overlapping on mobile */
 @media (max-width: 768px) {
   #hero {
-    padding-top: 300px; /* Adjust this value if needed */
+    padding-top: 200px; /* Adjust this value if needed */
   }
+}
+/* Border style button */
+.btn-border {
+  background: transparent;
+  color: #0ff;
+  border: 2px solid #0ff;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.btn-border::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 255, 255, 0.1);
+  transition: 0.3s;
+  z-index: 0;
+}
+
+.btn-border:hover {
+  color: #000;
+  background: #0ff;
+  box-shadow: 0 0 15px #0ff, 0 0 30px #f0f;
+}
+
+.btn-border:hover::after {
+  left: 0;
 }
